@@ -25,4 +25,10 @@ public class Cell : MonoBehaviour
         _spriteRenderer.sprite = _xSprite;
         GridManager.Instance.CheckAndDestroyMatches();
     }
+
+    public void ResetCell()
+    {
+        _isX = false;
+        _spriteRenderer.sprite = null;
+    }
 }

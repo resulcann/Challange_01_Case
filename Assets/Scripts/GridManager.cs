@@ -92,8 +92,9 @@ public class GridManager : LocalSingleton<GridManager>
             
             foreach (var cell in cellsToDestroy)
             {
-                PoolManager.Instance.DeSpawnCell(cell.gameObject);
-                _gridCells[cell.X, cell.Y] = null;
+                //PoolManager.Instance.DeSpawnCell(cell.gameObject);
+                cell.ResetCell();
+                //_gridCells[cell.X, cell.Y] = null;
             }
         }
         
